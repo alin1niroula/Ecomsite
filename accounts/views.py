@@ -18,6 +18,7 @@ from carts.views import _cart_id
 from carts.models import Cart, CartItem
 import requests
 
+
 def register(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
