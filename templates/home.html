@@ -8,16 +8,20 @@
 
 
 <!-- ========================= SECTION MAIN ========================= -->
-<section class="section-intro padding-y-sm">
-<div class="container">
+		 <div class="col-md-6">
+                        <div class="header-slider normal-slider">
+                            {% for slider in sliders %}
+                            <div class="header-slider-item">
+                                <img src="{{slider.image.url}}" width = "600" height = "400" alt="Slider Image" />
+                                <div class="header-slider-caption">
+                                    <p>{{slider.description}}</p>
+                                    <a class="btn" href="{{slider.image.url}}"><i class="fa fa-shopping-cart"></i>Shop Now</a>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
 
-<div class="intro-banner-wrap">
-	<img src="{% static 'images/banners/cover.jpg' %}" class="img-fluid rounded">
-</div>
-
-</div> <!-- container //  -->
-</section>
-<!-- ========================= SECTION MAIN END// ========================= -->
 
 <!-- ========================= SECTION  ========================= -->
 <section class="section-name padding-y-sm">
