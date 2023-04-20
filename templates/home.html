@@ -8,19 +8,11 @@
 
 
 <!-- ========================= SECTION MAIN ========================= -->
-		 <div class="col-md-6">
-                        <div class="header-slider normal-slider">
-                            {% for slider in sliders %}
-                            <div class="header-slider-item">
-                                <img src="{{slider.image.url}}" width = "600" height = "400" alt="Slider Image" />
-                                <div class="header-slider-caption">
-                                    <p>{{slider.description}}</p>
-                                    <a class="btn" href="{{slider.image.url}}"><i class="fa fa-shopping-cart"></i>Shop Now</a>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
+		<div class="slider">
+    {% for slide in sliderdata %}
+      <img src="{{ slide.image.url }}" alt="{{ slide.title }}">
+    {% endfor %}
+  </div>
 
 
 <!-- ========================= SECTION  ========================= -->
